@@ -23,7 +23,7 @@ function App() {
       <header className="App-header">
         <h1> Hello LoTuS</h1>
         <button onClick={onclose}>close</button>
-      </header>
+      </header> 
     </div>
   );
 }
