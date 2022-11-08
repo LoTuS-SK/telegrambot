@@ -1,22 +1,28 @@
-import logo from './logo.svg';
+
+import { useEffect } from 'react';
 import './App.css';
 
+const tg = window.Telegram.WebApp;
+
+
+
+const onclose = ()=>{
+  tg.close()
+}
+
+
 function App() {
+
+  useEffect(()=>{
+    tg.ready();
+  },[])
+
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1> Hello LoTuS</h1>
+        <button onClick={onclose}>close</button>
       </header>
     </div>
   );
