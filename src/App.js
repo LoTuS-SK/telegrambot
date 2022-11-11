@@ -19,9 +19,9 @@ function App() {
 
   return (
     <div className="App">
-     <Header/>
-     <button onClick={ontogglebutton}>toogle2</button>
-
+     <Header />
+     <button onClick={ontogglebutton}>toogle2123</button>
+      <h1>WFT</h1>
     </div>
   );
 }

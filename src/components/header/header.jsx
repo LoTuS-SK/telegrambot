@@ -9,7 +9,7 @@ const {onclose,user} = telegram();
   return (
     <div className={'header'}>
         <Button onClick={onclose}>Закрыть</Button>
-        <span className={'username'}>Имя - {user.username}</span>
+        <span className={'username'}>Имя - {user}</span>
     </div>
   )
 }
