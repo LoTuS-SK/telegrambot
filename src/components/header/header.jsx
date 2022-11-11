@@ -12,7 +12,7 @@ export const Header = () => {
   return (
     <div className={'header'}>
         <Button onClick={onclose}>Закрыть</Button>
-        <span className={'username'}>{tg.initDataUnsafe?.user?.username}</span>
+        <span className={'username'}>Имя - {tg.initDataUnsafe?.user?.username}</span>
     </div>
   )
 }
