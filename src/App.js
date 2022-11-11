@@ -1,16 +1,15 @@
 
 import { useEffect } from 'react';
 import './App.css';
-import { Button } from './components/button/button';
 import {Header} from "./components/header/header"
 import { telegram } from './components/hooks/usetelegramApp';
 
 
-
+const {tg,ontogglebutton} = telegram();
 
 function App() {
   
-const {tg,ontogglebutton} = telegram();
+
 
   useEffect( () => {
     tg.ready();
@@ -22,6 +21,7 @@ const {tg,ontogglebutton} = telegram();
     <div className="App">
      <Header/>
      <button onClick={ontogglebutton}>toogle2</button>
+
     </div>
   );
 }

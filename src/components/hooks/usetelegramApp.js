@@ -15,10 +15,10 @@ export function telegram() {
     }
 
     return {
-        tg,
         onclose,
+        tg,
         ontogglebutton,
-        user:initDataUnsafe?.user
+        user:tg.initDataUnsafe?.user
     }
     
 }
