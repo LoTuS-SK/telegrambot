@@ -21,7 +21,7 @@ const {tg,ontogglebutton} = telegram();
   return (
     <div className="App">
      <Header/>
-     <button onClick={ontogglebutton}></button>
+     <button onClick={ontogglebutton}>toogle</button>
     </div>
   );
 }
