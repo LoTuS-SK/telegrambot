@@ -10,5 +10,7 @@ body{
   border: none;
   outline: none;
   cursor: pointer;
-
+  border: 1px solid black;
+  margin: 0 auto;
+  width: 413px;
 }
