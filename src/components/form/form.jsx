@@ -14,14 +14,7 @@ export const Form = () => {
     const {tg} = telegram();
     console.log(tg)
 
-    useEffect(()=>{
-        if(!name){
-            tg.MainButton.show()
-        } else {
-            tg.MainButton.hide()
-        }
-        
-    })
+   
 
     useEffect(()=>{
         tg.MainButton.Params({
