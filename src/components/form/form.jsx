@@ -17,7 +17,7 @@ export const Form = () => {
    
 
     useEffect(()=>{
-        tg.MainButton.Params({
+        tg.MainButton.setParams({
             text:"кнопка"
         })
     })
