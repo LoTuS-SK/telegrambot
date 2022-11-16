@@ -7,7 +7,8 @@ import { useEffect } from 'react'
 export const Form = () => {
 
     const [name,setname] = useState("")
-    const [number,setnumber]= useState("")
+    const [count,setcount]= useState("")
+    const [tel,setFon]= useState("")
     const {tg} = telegram();
 
     useEffect(()=>{
@@ -18,20 +19,23 @@ export const Form = () => {
    
 
     useEffect(()=>{
-        if(!name || !number){
+        if(!name || !count){
             tg.MainButton.hide()
         } else {
             tg.MainButton.show()
         }
        
-    },[ name, number ])
+    },[ name, count ])
 
 
     const onchanename =(e)=>{
         setname(e.target.value)
     }
+    const onchangcount =(e)=>{
+        setcount(e.target.value)
+    }
     const onchangtel =(e)=>{
-        setnumber(e.target.value)
+        setFon(e.target.value)
     }
 
   return (
@@ -44,15 +48,21 @@ export const Form = () => {
         onChange={onchanename}
         
         />
-        <input type="number" className={'input'} placeholder='количество гостей'/>
+        <input 
+        type="number" 
+        className={'input'}
+        placeholder='количество гостей'
+        value={count}
+        onChange={onchangcount} 
+        />
         
         <input 
         type="tel" 
-        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" 
         className={'input'}
         onChange={onchangtel}
-        value={number} 
+        value={tel} 
         placeholder='номер телефона'
+        onChange={onchangtel} 
         />
         
         <input type="date" className={'input'} placeholder='дата мероприятия'/>
