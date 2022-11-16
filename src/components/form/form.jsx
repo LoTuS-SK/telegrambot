@@ -9,21 +9,17 @@ export const Form = () => {
     const [name,setname] = useState("")
     const [count,setcount]= useState("")
     const [tel,setFon]= useState("")
-    const {tg ,ontogglebutton} = telegram();
+    const {tg } = telegram();
     
-    tg.MainButton.show()
 
-    useEffect(()=>{
-        tg.MainButton.setParams({
-            text:"отправить"
-        })
-    },[])
+    // useEffect(()=>{
+    //     tg.MainButton.setParams({
+    //         text:"отправить"
+    //     })
+    // },[])
    
 
-    useEffect(()=>{
-        ontogglebutton();
-    },[ name, count ])
-
+ 
 
     const onchanename =(e)=>{
         setname(e.target.value)
