@@ -9,7 +9,8 @@ export const Form = () => {
     const [name,setname] = useState("")
     const [count,setcount]= useState("")
     const [tel,setFon]= useState("")
-    const {tg} = telegram();
+    const {tg ,ontogglebutton} = telegram();
+    
     tg.MainButton.show()
 
     useEffect(()=>{
@@ -20,12 +21,7 @@ export const Form = () => {
    
 
     useEffect(()=>{
-        if(!name || !count){
-            tg.MainButton.hide()
-        } else {
-            tg.MainButton.show()
-        }
-       
+        ontogglebutton();
     },[ name, count ])
 
 
