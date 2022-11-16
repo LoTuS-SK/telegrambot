@@ -1,11 +1,31 @@
 import React from 'react'
 import { useState } from 'react'
 import "./form.css"
+import { telegram } from "../../components/hooks/usetelegramApp"
+import { useEffect } from 'react'
 
 export const Form = () => {
 
     const [name,setname] = useState("")
     const [number,setnamber]= useState("")
+    const {tg} = telegram();
+
+    useEffect(()=>{
+        tg.MainButton.setParams({
+            text:"отправить"
+        })
+    },[])
+   
+
+    useEffect(()=>{
+        if(!name||!number){
+            tg.MainButton.hide()
+        } else {
+            tg.MainButton.show()
+        }
+       
+    },[name,number])
+
 
     const onchanename =(e)=>{
         setname(e.target.value)
