@@ -8,7 +8,7 @@ const {user,ontogglebutton} = telegram();
 
   return (
     <div className={'header'}>
-        <Button onClick={ontogglebutton}>Закрыть</Button>
+        <Button onClick={ontogglebutton}>кнопка</Button>
         <span className={'username'}>Имя - {user}</span>
     </div>
   )
