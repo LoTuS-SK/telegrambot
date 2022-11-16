@@ -27,7 +27,7 @@ export const Form = () => {
         } else {
             tg.MainButton.show();
         }
-    },[])
+    },[name,count,tg])
 
     function onchanename(e) {
         setname(e.target.value)
