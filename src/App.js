@@ -3,9 +3,11 @@ import { useEffect } from 'react';
 import './App.css';
 import {Header} from "./components/header/header"
 import { telegram } from './components/hooks/usetelegramApp';
+import { Route ,Routes } from "react-router-dom"
+import { Form } from './components/form/form';
+import {Product} from "./components/productlist/product"
 
-
-const {tg,ontogglebutton} = telegram();
+const {tg} = telegram();
 
 function App() {
   
@@ -20,7 +22,11 @@ function App() {
   return (
     <div className="App">
      <Header />
-     <button onClick={ontogglebutton}>toogle</button>
+     <Routes>
+        <Route index element = {<Product/>} />
+        <Route path ={"form"} element = {<Form/>}/>
+        
+     </Routes>
       
     </div>
   );
