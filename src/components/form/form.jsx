@@ -21,7 +21,13 @@ export const Form = () => {
             tg.MainButton.hide()
         }
         
-    }, [name,count])
+    })
+
+    useEffect(()=>{
+        tg.MainButton.Params({
+            text:"кнопка"
+        })
+    })
 
     function onchanename(e) {
         setname(e.target.value)
