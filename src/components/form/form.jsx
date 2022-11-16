@@ -10,6 +10,7 @@ export const Form = () => {
     const [count,setcount]= useState("")
     const [tel,setFon]= useState("")
     const {tg} = telegram();
+    tg.MainButton.show()
 
     useEffect(()=>{
         tg.MainButton.setParams({
@@ -59,10 +60,10 @@ export const Form = () => {
         <input 
         type="tel" 
         className={'input'}
-        onChange={onchangtel}
+        
         value={tel} 
         placeholder='номер телефона'
-        onChange={onchangtel} 
+        onChange ={onchangtel} 
         />
         
         <input type="date" className={'input'} placeholder='дата мероприятия'/>
