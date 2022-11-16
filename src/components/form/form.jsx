@@ -16,7 +16,7 @@ export const Form = () => {
 
     useEffect(()=>{
         tg.MainButton.show()
-    },)
+    },[name])
 
     function onchanename(e) {
         setname(e.target.value)
