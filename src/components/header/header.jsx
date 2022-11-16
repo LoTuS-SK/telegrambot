@@ -4,11 +4,11 @@ import { telegram } from '../hooks/usetelegramApp';
 
 export const Header = () => {
 
-const {user,ontogglebutton} = telegram();
+const {user,onclose} = telegram();
 
   return (
     <div className={'header'}>
-        <Button onClick={ontogglebutton}>кнопка</Button>
+        <Button onClick={onclose}>кнопка</Button>
         <span className={'username'}>Имя - {user}</span>
     </div>
   )
