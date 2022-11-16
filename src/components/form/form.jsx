@@ -15,8 +15,13 @@ export const Form = () => {
     console.log(tg)
 
     useEffect(()=>{
-        tg.MainButton.show()
-    },[name])
+        if(!name){
+            tg.MainButton.show()
+        } else {
+            tg.MainButton.hide()
+        }
+        
+    }, [name,count])
 
     function onchanename(e) {
         setname(e.target.value)
