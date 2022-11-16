@@ -1,22 +1,24 @@
 import React from 'react'
 import { useState } from 'react'
 import "./form.css"
-//import { telegram } from "../../components/hooks/usetelegramApp"
-//import { useEffect } from 'react'
+import { telegram } from "../hooks/usetelegramApp"
+import { useEffect } from 'react'
+
+
 
 export const Form = () => {
 
     const [name,setname] = useState("")
     const [count,setcount]= useState("")
     const [tel,setFon]= useState("")
-    //const {tg } = telegram();
-    
+    const {tg} = telegram();
+    console.log(tg)
 
- 
+    useEffect(()=>{
+        tg.MainButton.show()
+    },)
 
- 
-
-    const onchanename =(e)=>{
+    function onchanename(e) {
         setname(e.target.value)
     }
     const onchangcount =(e)=>{
