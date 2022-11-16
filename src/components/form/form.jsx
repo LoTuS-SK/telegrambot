@@ -5,7 +5,7 @@ import "./form.css"
 export const Form = () => {
 
     const [name,setname] = useState("Sergey")
-    const [number,setnamber]= useState(0)
+    //const [number,setnamber]= useState(0)
 
     const onchane =(e)=>{
         setname(e.target.value)
