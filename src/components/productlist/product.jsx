@@ -1,5 +1,5 @@
 import React from 'react'
-import {base} from "../database/database"
+import {base,salad} from "../database/database"
 import { useState } from 'react'
 import "./product.css"
 
@@ -9,7 +9,9 @@ import "./product.css"
 export const Product = () => {
   
   const [items,setitems] = useState([])
-  const [display,setdisplay] = useState(true)
+  const [snake_display,set_snake_display] = useState(false)
+  const [salad_display,set_salad_display] = useState(false)
+  const [menu1_display,set_menu1_display] = useState(true)
   
   function add(e){
     
@@ -37,20 +39,50 @@ export const Product = () => {
 
   const menu1 = ["Закуски","Салаты","Печь","Горячее Блюда","Гриль"]
 
-const displaySnake = () =>{
-      setdisplay(false)
+const displaySnake = (e) =>{
+  
+  const dispaly = e.target.textContent
+  
+  if(dispaly === "Салаты"){
+    set_snake_display(false)
+    set_menu1_display(false)
+    set_salad_display(true)
+  }
+  if(dispaly === "Закуски"){
+    set_snake_display(true)
+    set_menu1_display(false)
+    set_salad_display(false)
+  }
+  
 }
+
+const back = () =>{
+  set_snake_display(false)
+  set_menu1_display(true)
+  set_salad_display(false)
+}
+
 
 
 return (
     <div className={"menu"}>
-      <div className={display ? "snakes none" : "snakes" }>
+      <div className={snake_display ? "snakes " : "snakes none" }>
+        
       {
       base.map(data1=>(<button onClick={add}>{data1.name}</button>))
       }
+      
+     
+      <button onClick={back}>назад</button>
       </div>
-      <div className={display ? "menu-items" : "menu-items none"}>
+      <div className={salad_display?"salad":"salad none"}>
+        {salad.map(data=>(<button onClick={add}>{data.name}</button>))}
+        <button onClick={back}>назад</button>
+      </div>
+      
+      <div className={menu1_display ? "menu-items": "menu-items none" }>
             {menu1.map(element=>(<button onClick={displaySnake}>{element}</button>))}
+            <button onClick={back}>назад</button>
       </div>
 
 
