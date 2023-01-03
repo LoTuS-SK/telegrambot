@@ -5,7 +5,9 @@ import {Header} from "./components/header/header"
 import { telegram } from './components/hooks/usetelegramApp';
 import { Route ,Routes } from "react-router-dom"
 import { Form } from './components/form/form';
-import {Product} from "./components/productlist/product"
+import {Product} from "./components/productlist/product";
+import { Vine } from './components/productlist/vine';
+import {Admin} from "../src/components/productlist/admin"
 
 const {tg} = telegram();
 
@@ -25,6 +27,8 @@ function App() {
      <Routes>
         <Route index element = {<Product/>} />
         <Route path ={"form"} element = {<Form/>}/>
+        <Route path ={"admin"} element = {<Admin/>}/>
+        <Route path ={"vine"} element = {<Vine/>}/>
         
      </Routes>
       

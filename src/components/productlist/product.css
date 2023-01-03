@@ -24,10 +24,15 @@ button{
    padding: 4px;
     
 }
-.salad{
+.salad,.soup{
     display: flex;
     flex-direction: column;
 }
+.bake {
+    display: flex;
+    flex-direction: column;
+}
+
 
 .none {
     display:none;
