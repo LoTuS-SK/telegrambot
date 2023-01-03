@@ -2,7 +2,7 @@ import React from 'react'
 import {base,salad,bake,soup} from "../database/database"
 import { useState } from 'react'
 import "./product.css"
-import { useEffect } from 'react'
+//import { useEffect } from 'react'
 
 
 //
@@ -58,9 +58,7 @@ export const Product = () => {
     set_bake_display(false)
   }
   
-  useEffect(()=>{
-    saladd()
-},[items])
+  
 
 
 
