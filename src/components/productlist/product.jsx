@@ -1,8 +1,10 @@
 import React from 'react'
-import {base,salad,bake,soup} from "../database/database"
+import { base , salad, bake , hotdish, soup , onFire, garnish, bread, sweets } from "../database/database"
 import { useState } from 'react'
 import "./product.css"
-//import { useEffect } from 'react'
+import { useEffect } from 'react'
+import { useCallback } from 'react'
+
 
 
 //
@@ -10,13 +12,20 @@ import "./product.css"
 export const Product = () => {
   
   const [items,setitems] = useState([])
-  
   const [list_salad,setlistaslad]=useState([])
+  const [list_salad_header,setlist_salad_header]= useState(false)
+  
+  
   const [snake_display,set_snake_display] = useState(false)
   const [salad_display,set_salad_display] = useState(false)
   const [menu1_display,set_menu1_display] = useState(true)
   const [soup_display,set_soup_display] = useState(false)
   const [bake_dispaly,set_bake_display] = useState(false)
+  const [hotdish_dispaly,set_hotdish_display] = useState(false)
+  const [onFire_dispaly,set_onFire_display] = useState(false)
+  const [garnish_dispaly,set_garnish_display] = useState(false)
+  const [bread_dispaly,set_bread_display] = useState(false)
+  const [sweets_dispaly,set_sweets_display] = useState(false)
   
   
   
@@ -47,6 +56,56 @@ export const Product = () => {
       set_soup_display(false)
       set_bake_display(true)
     }
+    if(dispaly === "Горячее Блюда"){
+      set_snake_display(false)
+      set_menu1_display(false)
+      set_salad_display(false)
+      set_soup_display(false)
+      set_bake_display(false)
+      set_hotdish_display(true)
+    }
+    if(dispaly === "Гриль"){
+      set_snake_display(false)
+      set_menu1_display(false)
+      set_salad_display(false)
+      set_soup_display(false)
+      set_bake_display(false)
+      set_hotdish_display(false)
+      set_onFire_display(true)
+    }
+    if(dispaly === "Гарнир"){
+      set_snake_display(false)
+      set_menu1_display(false)
+      set_salad_display(false)
+      set_soup_display(false)
+      set_bake_display(false)
+      set_hotdish_display(false)
+      set_onFire_display(false)
+      set_garnish_display(true)
+    }
+    if(dispaly === "Хлеб"){
+      set_snake_display(false)
+      set_menu1_display(false)
+      set_salad_display(false)
+      set_soup_display(false)
+      set_bake_display(false)
+      set_hotdish_display(false)
+      set_onFire_display(false)
+      set_garnish_display(false)
+      set_bread_display(true)
+    }
+    if(dispaly === "Cладкое"){
+      set_snake_display(false)
+      set_menu1_display(false)
+      set_salad_display(false)
+      set_soup_display(false)
+      set_bake_display(false)
+      set_hotdish_display(false)
+      set_onFire_display(false)
+      set_garnish_display(false)
+      set_bread_display(false)
+      set_sweets_display(true)
+    }
   
   }
   
@@ -56,17 +115,49 @@ export const Product = () => {
     set_salad_display(false)
     set_soup_display(false)
     set_bake_display(false)
+    set_hotdish_display(false)
+    set_onFire_display(false)
+    set_garnish_display(false)
+    set_bread_display(false)
+    set_sweets_display(false)
+    
   }
   
-  
+  // function saladd(){
+  //   let arr = []
+  //     for( let elem of salad ){
+  //      for( let elem2 of items ){
+  //        if (elem.name === elem2.name){
+  //          elem.count = elem2.count
+  //          arr.push(elem)
+  //          //console.log(elem)
+  //       }
+  //      }
+  //     }
+  //       setlistaslad(arr)
+  // }
+const sals = useCallback(()=>{
+  function saladd(){
+    let arr = []
+      for( let elem of salad ){
+       for( let elem2 of items ){
+         if (elem.name === elem2.name){
+           elem.count = elem2.count
+           arr.push(elem)
+           //console.log(elem)
+        }
+       }
+      }
+        setlistaslad(arr)
+  }
+  saladd()
+},[items])
 
+  useEffect(()=>{
+    sals()
+  },[sals])
 
-
-
-
- 
-
-   function add(e){
+  function add(e){
     
     const text = e.target.textContent;
 
@@ -74,7 +165,7 @@ export const Product = () => {
    
     let newbludo = {name:text,count:1}
      setitems([...items,newbludo])
-     console.log(items)
+    
     
     }
 
@@ -94,37 +185,31 @@ export const Product = () => {
       }
     }
     
-    console.log(items)
-    saladd()
-
-   
+    
+    sals()
+    if (list_salad) { setlist_salad_header(true) } else { setlist_salad_header(false) } 
+  
   }
 
-  function saladd(){
-    let arr = []
-      for( let elem of salad ){
-       for( let elem2 of items ){
-         if (elem.name === elem2.name){
-           elem.count = elem2.count
-           arr.push(elem)
-           console.log(elem)
-        }
-       }
-      }
-        setlistaslad(arr)
-  }
-
+ 
   
    
 function del(e){
-  let item = e.target.textContent
-  console.log(item)
-
+  const text = e.target.textContent
+  const  count = items[items.findIndex(el=>el.name===text)].count
+  
+  if(count === 1 ){
+     const fil = items.filter(el=>el.name !== text) 
+      console.log(fil)
+      setitems([...fil])
+      console.log(items)
+    return
+  }
+  items[items.findIndex(el=>el.name===text)].count=count-1
+  setitems([...items])
 }
 
-  const menu1 = ["Закуски","Салаты","Печь","Горячее Блюда","Гриль","Супы"]
-
-
+  const menu1 = ["Закуски","Салаты","Печь","Хлеб","Горячее Блюда","Гриль","Гарнир","Супы","Cладкое","напитки"]
 const copy = () => {
   navigator.clipboard.writeText("'Hello!")
 }
@@ -135,12 +220,12 @@ return (
             {menu1.map(element=>(<button onClick={displaySnake}>{element}</button>))}
             {/* <button onClick={back}>назад</button> */}
       </div>
-      
+      {/* закуски */}
       <div className={snake_display ? "snakes " : "snakes none" }>
             {base.map(data1=>(<button onClick={add}>{data1.name}</button>))}
             <button onClick={back}>назад</button>
       </div>
-      
+      {/* салаты */}
       <div className={salad_display?"salad":"salad none"}>
             {salad.map(data=>(<button onClick={add}>{data.name}</button>))}
             <button onClick={back}>назад</button>
@@ -155,10 +240,27 @@ return (
             <button onClick={back}>назад</button>
       </div>
       
+      <div className={hotdish_dispaly?"bake":"bake none"}>
+            {hotdish.map(data=>(<button onClick={add}>{data.name}</button>))}
+            <button onClick={back}>назад</button>
+      </div>
+      <div className={onFire_dispaly?"bake":"bake none"}>
+            {onFire.map(data=>(<button onClick={add}>{data.name}</button>))}
+            <button onClick={back}>назад</button>
+      </div>
+      <div className={garnish_dispaly?"bake":"bake none"}>
+            {garnish.map(data=>(<button onClick={add}>{data.name}</button>))}
+            <button onClick={back}>назад</button>
+      </div>
+      <div className={bread_dispaly?"bake":"bake none"}>
+            {bread.map(data=>(<button onClick={add}>{data.name}</button>))}
+            <button onClick={back}>назад</button>
+      </div>
+      <div className={sweets_dispaly?"bake":"bake none"}>
+            {sweets.map(data=>(<button onClick={add}>{data.name}</button>))}
+            <button onClick={back}>назад</button>
+      </div>
       
-      
-
-
       <div className="list">
       <h3 className="sank">закуски</h3>
      
@@ -168,9 +270,11 @@ return (
       }
      
       </div>
-      <h3 className="sank">Салаты</h3>
+      <h3 className={list_salad_header?"snake":"snake none"}>Салаты</h3>
+
+    
       {
-        list_salad.map(el=>(<div onClick={del}>{el.name}- {el.count}</div>))
+       list_salad.map(el=>(<div onClick={del}><span>{el.name}</span> - {el.count}</div>))
       }
       <button onClick={copy}>copy</button>
     </div>

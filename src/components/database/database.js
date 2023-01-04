@@ -38,6 +38,7 @@ export const salad = [
 export const soup = [
     {id:1,name:"Суп из Астраханских раков с обжаренными лангустинами и муссом из Пармезана",price:690,weight:300,section:"супы"},
     {id:2,name:"Наваристый борщ с дичью и домашней сметаной",price:450,weight:300,section:"супы"},
+    {id:3,name:"Щи из квашеной капусты с лосем",price:390,weight:300,section:"супы"},
     {id:3,name:"Щи из квашеной капусты с лосем",price:390,weight:300,section:"супы"}
     
 ]
