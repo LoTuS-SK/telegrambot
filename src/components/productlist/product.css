@@ -24,7 +24,7 @@ button{
    padding: 4px;
     
 }
-.salad,.soup{
+.salad,.soup,.ice{
     display: flex;
     flex-direction: column;
 }

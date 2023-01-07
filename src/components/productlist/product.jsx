@@ -1,9 +1,11 @@
 import React from 'react'
-import { base , salad, bake , hotdish, soup , onFire, garnish, bread, sweets } from "../database/database"
+import { base , salad, bake , hotdish, soup , onFire, garnish, bread, } from "../database/database"
 import { useState } from 'react'
 import "./product.css"
 import { useEffect } from 'react'
 import { useCallback } from 'react'
+import { Sweet } from './sweet'
+
 
 
 
@@ -13,7 +15,7 @@ export const Product = () => {
   
   const [items,setitems] = useState([])
   const [list_salad,setlistaslad]=useState([])
-  const [list_salad_header,setlist_salad_header]= useState(false)
+  
   
   
   const [snake_display,set_snake_display] = useState(false)
@@ -187,7 +189,7 @@ const sals = useCallback(()=>{
     
     
     sals()
-    if (list_salad) { setlist_salad_header(true) } else { setlist_salad_header(false) } 
+     
   
   }
 
@@ -256,11 +258,8 @@ return (
             {bread.map(data=>(<button onClick={add}>{data.name}</button>))}
             <button onClick={back}>назад</button>
       </div>
-      <div className={sweets_dispaly?"bake":"bake none"}>
-            {sweets.map(data=>(<button onClick={add}>{data.name}</button>))}
-            <button onClick={back}>назад</button>
-      </div>
-      
+      <Sweet add={add} back={back} display={sweets_dispaly}/>
+    
       <div className="list">
       <h3 className="sank">закуски</h3>
      
@@ -270,7 +269,7 @@ return (
       }
      
       </div>
-      <h3 className={list_salad_header?"snake":"snake none"}>Салаты</h3>
+      <h3>Салаты</h3>
 
     
       {
