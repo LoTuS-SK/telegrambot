@@ -6,7 +6,7 @@ import { telegram } from './components/hooks/usetelegramApp';
 import { Route ,Routes } from "react-router-dom"
 import { Form } from './components/form/form';
 import {Product} from "./components/productlist/product";
-import { Vine } from './components/productlist/vine';
+import { Vine } from './components/productlist/vine/vine';
 import {Admin} from "../src/components/productlist/admin"
 
 const {tg} = telegram();
