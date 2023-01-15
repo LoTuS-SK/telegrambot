@@ -403,9 +403,10 @@ function del(e){
 
 
 return (
+  <>
     <div className={"menu"}>
       <div className={menu1_display ? "menu-items": "menu-items none" }>
-            {menu1.map(element=>(<button onClick={displaySnake}>{element}</button>))}
+            {menu1.map(element=>(<button className="testb" onClick={displaySnake}>{element}</button>))}
             
       </div>
       {/* закуски */}
@@ -454,7 +455,8 @@ return (
       </div>
       
       <Sweet add={add} back={back} display={sweets_dispaly} name={name1} />
-    
+      </div>
+      
       <div className="list">
      
      
@@ -496,6 +498,7 @@ return (
     
       
       
-    </div>
+     
+    </>
   )
        }       
