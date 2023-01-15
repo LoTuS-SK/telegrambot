@@ -459,7 +459,7 @@ return (
      
      
       {list_snakes.length>0  && <h3>Закуски</h3>}
-      {list_snakes.map(el=>(<div onClick={del}><span>{el.name}</span> - {el.count}</div>))}
+      {list_snakes.map(el=>(<div onClick={del}><span className='span'>{el.name}</span> <span className='span count'>{el.count}</span></div>))}
       
       {list_salad.length>0  && <h3>Салаты</h3>}
       {list_salad.map(el=>(<div className="list-item" onClick={del}><span className='span'>{el.name}</span> <span className='span count'>{el.count}</span></div>))}
