@@ -21,9 +21,9 @@ const sweets = [
     {id:1,name:"Вишневое",price:150,weight:70,section:"варенье"},
     {id:1,name:"Гречкий орех",price:150,weight:70,section:"варенье"},
     {id:1,name:"Клубничное",price:150,weight:70,section:"варенье"},
-    {id:1,name:"Айва",price:450,weight:170,section:"сладкое"},
-    {id:1,name:"Кизил",price:450,weight:170,section:"сладкое"},
-    {id:1,name:"Малина",price:450,weight:170,section:"сладкое"},
+    {id:1,name:"Айва",price:450,weight:170,section:"варенье"},
+    {id:1,name:"Кизил",price:450,weight:170,section:"варенье"},
+    {id:1,name:"Малина",price:450,weight:170,section:"варенье"},
     {id:1,name:"Ржаное",price:190,weight:50,section:"мороженое"},
     {id:1,name:"Лен с васильковым медом",price:190,weight:50,section:"мороженое"},
     {id:1,name:"Белые грибы",price:190,weight:50,section:"мороженое"},
@@ -38,37 +38,46 @@ const sweets = [
 
 
 
-export const Sweet = ({add,back,display}) => {
+export const Sweet = ({add,back,display,name}) => {
 
 function menu_sweet(e){
 
+    
     const display = e.target.textContent
     console.log(display)
     if(display==="Мороженое"){
         set_sweet_decert(false)
         set_sweet_djem(false)
         set_sweet_ice(true)
+        name(false)
+        
         
     }
     if(display==="Варенье"){
     set_sweet_decert(false)
     set_sweet_djem(true)
     set_sweet_ice(false)
+    name(false)
+    
     
     }
     if(display==="Десерты"){
     set_sweet_decert(true)
     set_sweet_djem(false)
     set_sweet_ice(false)
+    name(false)
     
-}
+    
+    }
 }
 
 function back_sweet(){
     set_sweet_decert(false)
     set_sweet_djem(false)
     set_sweet_ice(false)
-        
+    name(true)
+    
+    
 }
 
     const sweetsmenu = ["Десерты","Мороженое","Варенье"]
@@ -78,6 +87,8 @@ function back_sweet(){
     const [sweet_decert,set_sweet_decert]= useState(false)
     
     const ice = sweets.filter((el)=>el.section==="мороженое")
+    const djem = sweets.filter((el)=>el.section==="варенье")
+    const decert = sweets.filter((el)=>el.section==="сладкое")
 
     return (
     <div>
@@ -92,12 +103,12 @@ function back_sweet(){
            ))}
             <button onClick={back_sweet}>назад</button>
       </div>
-      <div className={sweet_djem?"djem":"ice none"}>
-            {sweets.map(data=>(<button onClick={add}>{data.name}</button>))}
+      <div className={sweet_djem?"ice":"ice none"}>
+            {djem.map(data=>(<button onClick={add}>{data.name}</button>))}
             <button onClick={back_sweet}>назад</button>
       </div>
-      <div className={sweet_decert?"decert":"ice none"}>
-            {sweets.map(data=>(<button onClick={add}>{data.name}</button>))}
+      <div className={sweet_decert?"ice":"ice none"}>
+            {decert.map(data=>(<button onClick={add}>{data.name}</button>))}
             <button onClick={back_sweet}>назад</button>
       </div>
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { base , salad, bake , hotdish, soup , onFire, garnish, bread, } from "../database/database"
+import { base , salad, Bake , hotbluda, soup , onFire, garnish, bread, Sweets , aqua , sous} from "../database/database"
 import { useState } from 'react'
 import "./product.css"
 import { useEffect } from 'react'
@@ -15,6 +15,19 @@ export const Product = () => {
   
   const [items,setitems] = useState([])
   const [list_salad,setlistaslad]=useState([])
+  const [list_snakes,set_list_snakes]=useState([])
+  const [list_hotdish,set_list_hotdish]=useState([])
+  const [list_soup,set_list_soup]=useState([])
+  const [list_onFire,set_list_onFire]=useState([])
+  const [list_bake,set_list_bake]=useState([])
+  const [list_sweets,set_list_sweets]=useState([])
+  const [list_garnish,set_list_garnish]=useState([])
+  const [list_aqua,set_list_aqua]=useState([])
+  const [list_bread,set_list_bread]=useState([])
+  const [list_sous,set_list_sous]=useState([])
+  
+  const [h1,set_h1]=useState([])
+
   
   
   
@@ -28,6 +41,8 @@ export const Product = () => {
   const [garnish_dispaly,set_garnish_display] = useState(false)
   const [bread_dispaly,set_bread_display] = useState(false)
   const [sweets_dispaly,set_sweets_display] = useState(false)
+  const [aqua_dispaly,set_sweets_aqua] = useState(false)
+  const [sous_dispaly,set_displa_sous] = useState(false)
   
   
   
@@ -58,7 +73,7 @@ export const Product = () => {
       set_soup_display(false)
       set_bake_display(true)
     }
-    if(dispaly === "Горячее Блюда"){
+    if(dispaly === "Горячие Блюда"){
       set_snake_display(false)
       set_menu1_display(false)
       set_salad_display(false)
@@ -108,6 +123,33 @@ export const Product = () => {
       set_bread_display(false)
       set_sweets_display(true)
     }
+    if(dispaly === "Аквариум"){
+      set_snake_display(false)
+      set_menu1_display(false)
+      set_salad_display(false)
+      set_soup_display(false)
+      set_bake_display(false)
+      set_hotdish_display(false)
+      set_onFire_display(false)
+      set_garnish_display(false)
+      set_bread_display(false)
+      set_sweets_display(false)
+      set_sweets_aqua(true)
+    }
+    if(dispaly === "Соус"){
+      set_snake_display(false)
+      set_menu1_display(false)
+      set_salad_display(false)
+      set_soup_display(false)
+      set_bake_display(false)
+      set_hotdish_display(false)
+      set_onFire_display(false)
+      set_garnish_display(false)
+      set_bread_display(false)
+      set_sweets_display(false)
+      set_sweets_aqua(false)
+      set_displa_sous(true)
+    }
   
   }
   
@@ -122,6 +164,8 @@ export const Product = () => {
     set_garnish_display(false)
     set_bread_display(false)
     set_sweets_display(false)
+    set_sweets_aqua(false)
+    set_displa_sous(false)
     
   }
   
@@ -146,17 +190,159 @@ const sals = useCallback(()=>{
          if (elem.name === elem2.name){
            elem.count = elem2.count
            arr.push(elem)
-           //console.log(elem)
+          
         }
        }
       }
         setlistaslad(arr)
   }
+  function snakes(){
+    let arr = []
+      for( let elem of base ){
+       for( let elem2 of items ){
+         if (elem.name === elem2.name){
+           elem.count = elem2.count
+           arr.push(elem)
+          
+        }
+       }
+      }
+        set_list_snakes(arr)
+  }
+  function hotdish(){
+    let arr = []
+      for( let elem of hotbluda){
+       for( let elem2 of items ){
+         if (elem.name === elem2.name){
+           elem.count = elem2.count
+           arr.push(elem)
+          
+        }
+       }
+      }
+      set_list_hotdish(arr)
+  }
+  function soupf(){
+    let arr = []
+      for( let elem of soup){
+       for( let elem2 of items ){
+         if (elem.name === elem2.name){
+           elem.count = elem2.count
+           arr.push(elem)
+          
+        }
+       }
+      }
+      set_list_soup(arr)
+  }
+  function onfire(){
+    let arr = []
+      for( let elem of onFire){
+       for( let elem2 of items ){
+         if (elem.name === elem2.name){
+           elem.count = elem2.count
+           arr.push(elem)
+          
+        }
+       }
+      }
+      set_list_onFire(arr)
+  }
+  function bake(){
+    let arr = []
+      for( let elem of Bake){
+       for( let elem2 of items ){
+         if (elem.name === elem2.name){
+           elem.count = elem2.count
+           arr.push(elem)
+          
+        }
+       }
+      }
+      set_list_bake(arr)
+  }
+  function sweets(){
+    let arr = []
+      for( let elem of Sweets){
+       for( let elem2 of items ){
+         if (elem.name === elem2.name){
+           elem.count = elem2.count
+           arr.push(elem)
+          
+        }
+       }
+      }
+      set_list_sweets(arr)
+  }
+  function gar(){
+    let arr = []
+      for( let elem of garnish){
+       for( let elem2 of items ){
+         if (elem.name === elem2.name){
+           elem.count = elem2.count
+           arr.push(elem)
+          
+        }
+       }
+      }
+      set_list_garnish(arr)
+  }
+  function Aqua(){
+    let arr = []
+      for( let elem of aqua){
+       for( let elem2 of items ){
+         if (elem.name === elem2.name){
+           elem.count = elem2.count
+           arr.push(elem)
+          
+        }
+       }
+      }
+      set_list_aqua(arr)
+  }
+  function Bread(){
+    let arr = []
+      for( let elem of bread){
+       for( let elem2 of items ){
+         if (elem.name === elem2.name){
+           elem.count = elem2.count
+           arr.push(elem)
+          
+        }
+       }
+      }
+      set_list_bread(arr)
+  }
+  function Sous(){
+    let arr = []
+      for( let elem of sous){
+       for( let elem2 of items ){
+         if (elem.name === elem2.name){
+           elem.count = elem2.count
+           arr.push(elem)
+          
+        }
+       }
+      }
+      set_list_sous(arr)
+  }
   saladd()
+  snakes()
+  hotdish()
+  soupf()
+  onfire()
+  bake()
+  sweets()
+  gar()
+  Aqua()
+  Bread()
+  Sous()
+  
 },[items])
 
   useEffect(()=>{
     sals()
+    
   },[sals])
 
   function add(e){
@@ -189,10 +375,14 @@ const sals = useCallback(()=>{
     
     
     sals()
-     
-  
-  }
+    
+}
 
+  function name1(params) {
+    console.log("hi2")
+    set_sweets_display(params)
+    
+  }
  
   
    
@@ -211,16 +401,20 @@ function del(e){
   setitems([...items])
 }
 
-  const menu1 = ["Закуски","Салаты","Печь","Хлеб","Горячее Блюда","Гриль","Гарнир","Супы","Cладкое","напитки"]
+
+
+
+  const menu1 = ["Закуски","Салаты","Печь","Хлеб","Горячие Блюда","Гриль","Гарнир","Соус","Супы","Аквариум","Cладкое","напитки"]
 const copy = () => {
   navigator.clipboard.writeText("'Hello!")
+  set_h1(["yes"])
 }
 
 return (
     <div className={"menu"}>
       <div className={menu1_display ? "menu-items": "menu-items none" }>
             {menu1.map(element=>(<button onClick={displaySnake}>{element}</button>))}
-            {/* <button onClick={back}>назад</button> */}
+            
       </div>
       {/* закуски */}
       <div className={snake_display ? "snakes " : "snakes none" }>
@@ -238,12 +432,16 @@ return (
             <button onClick={back}>назад</button>
       </div>
       <div className={bake_dispaly?"bake":"bake none"}>
-            {bake.map(data=>(<button onClick={add}>{data.name}</button>))}
+            {Bake.map(data=>(<button onClick={add}>{data.name}</button>))}
+            <button onClick={back}>назад</button>
+      </div>
+      <div className={sous_dispaly?"bake":"bake none"}>
+            {sous.map(data=>(<button onClick={add}>{data.name}</button>))}
             <button onClick={back}>назад</button>
       </div>
       
       <div className={hotdish_dispaly?"bake":"bake none"}>
-            {hotdish.map(data=>(<button onClick={add}>{data.name}</button>))}
+            {hotbluda.map(data=>(<button onClick={add}>{data.name}</button>))}
             <button onClick={back}>назад</button>
       </div>
       <div className={onFire_dispaly?"bake":"bake none"}>
@@ -258,23 +456,53 @@ return (
             {bread.map(data=>(<button onClick={add}>{data.name}</button>))}
             <button onClick={back}>назад</button>
       </div>
-      <Sweet add={add} back={back} display={sweets_dispaly}/>
+      <div className={aqua_dispaly?"bake":"bake none"}>
+            {aqua.map(data=>(<button onClick={add}>{data.name}</button>))}
+            <button onClick={back}>назад</button>
+      </div>
+      
+      <Sweet add={add} back={back} display={sweets_dispaly} name={name1} />
     
       <div className="list">
-      <h3 className="sank">закуски</h3>
      
-      <h3 className="s1">общий</h3>
-      {
-        items.map(el=><div>{el.name} - {el.count}</div>)
-      }
      
-      </div>
-      <h3>Салаты</h3>
+      {list_snakes.length>0  && <h3>Закуски</h3>}
+      {list_snakes.map(el=>(<div onClick={del}><span>{el.name}</span> - {el.count}</div>))}
+      
+      {list_salad.length>0  && <h3>Салаты</h3>}
+      {list_salad.map(el=>(<div onClick={del}><span>{el.name}</span> - {el.count}</div>))}
+      
+      {list_hotdish.length>0  && <h3>Горичие блюда</h3>}
+      {list_hotdish.map(el=>(<div onClick={del}><span>{el.name}</span> - {el.count}</div>))}
+      
+      {list_soup.length>0  && <h3>Супы</h3>}
+      {list_soup.map(el=>(<div onClick={del}><span>{el.name}</span> - {el.count}</div>))}
+      
+      {list_onFire.length>0  && <h3>Гриль</h3>}
+      {list_onFire.map(el=>(<div onClick={del}><span>{el.name}</span> - {el.count}</div>))}
+      
+      {list_bake.length>0  && <h3>Печь</h3>}
+      {list_bake.map(el=>(<div onClick={del}><span>{el.name}</span> - {el.count}</div>))}
+      
+      {list_bread.length>0  && <h3>Хлеб</h3>}
+      {list_bread.map(el=>(<div onClick={del}><span>{el.name}</span> - {el.count}</div>))}
+      
+      {list_sweets.length>0  && <h3>Сладкое</h3>}
+      {list_sweets.map(el=>(<div onClick={del}><span>{el.name}</span> - {el.count}</div>))}
+      
+      {list_garnish.length>0  && <h3>Гарниры</h3>}
+      {list_garnish.map(el=>(<div onClick={del}><span>{el.name}</span> - {el.count}</div>))}
+      
+      {list_aqua.length>0  && <h3>Аквариум</h3>}
+      {list_aqua.map(el=>(<div onClick={del}><span>{el.name}</span> - {el.count}</div>))}
+      
+      {list_sous.length>0  && <h3>Соус</h3>}
+      {list_sous.map(el=>(<div onClick={del}><span>{el.name}</span> - {el.count}</div>))}
 
+      {h1.length>0 && <h1>YES</h1>}
+     </div>
     
-      {
-       list_salad.map(el=>(<div onClick={del}><span>{el.name}</span> - {el.count}</div>))
-      }
+      
       <button onClick={copy}>copy</button>
     </div>
   )

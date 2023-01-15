@@ -30,6 +30,7 @@ function App() {
         <Route path ={"form"} element = {<Form/>}/>
         <Route path ={"admin"} element = {<Admin/>}/>
         <Route path ={"vine"} element = {<Vine/>}/>
+        <Route path ={"kitchen"} element = {<Product/>}/>
         
      </Routes>
 

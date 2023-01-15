@@ -6,7 +6,8 @@ export const base = [
     {id:5,name:"Форшмак из Олютюрской сельди и кислого яблока",price:390,weight:100,section:"закуски"},
     {id:6,name:"Сельдь собственного засола с молодым картофелем",price:460,weight:60,section:"закуски"},
     {id:7,name:"Строганина из чира",price:460,weight:60,section:"закуски"},
-    {id:8,name:"Оливки Гиганти / Каламата / Перчики с рикоттой",price:390,weight:90,section:"закуски"},
+    {id:8,name:"Оливки Гиганти / Каламата",price:390,weight:90,section:"закуски"},
+    {id:8,name:"Перчики с рикоттой",price:390,weight:90,section:"закуски"},
     {id:9,name:"Ассорти фермерских сыров с орехами",price:870,weight:210,section:"закуски"},
     {id:10,name:"Сырокопчёная Алтайская оленина",price:450,weight:50,section:"закуски"},
     {id:11,name:"Филе утки холодного копчения",price:470,weight:50,section:"закуски"},
@@ -19,7 +20,8 @@ export const base = [
     {id:18,name:"Сыровяленое ассорти",price:770,weight:160,section:"закуски"},
     {id:19,name:"Домашнее сало на гренках",price:460,weight:120,section:"закуски"},
     {id:20,name:"Домашнее сало на гренках",price:460,weight:120,section:"закуски"},
-    {id:21,name:"Боровики с душистым маслом / Грузди со сметано",price:580,weight:110,section:"закуски"},
+    {id:21,name:"Боровики с душистым маслом",price:580,weight:110,section:"закуски"},
+    {id:21,name:"Грузди со сметано",price:580,weight:110,section:"закуски"},
     
 
 ]
@@ -39,11 +41,11 @@ export const soup = [
     {id:1,name:"Суп из Астраханских раков с обжаренными лангустинами и муссом из Пармезана",price:690,weight:300,section:"супы"},
     {id:2,name:"Наваристый борщ с дичью и домашней сметаной",price:450,weight:300,section:"супы"},
     {id:3,name:"Щи из квашеной капусты с лосем",price:390,weight:300,section:"супы"},
-    {id:3,name:"Щи из квашеной капусты с лосем",price:390,weight:300,section:"супы"}
+    //{id:3,name:"Щи из квашеной капусты с лосем",price:390,weight:300,section:"супы"}
     
 ]
 
-export const bake = [
+export const Bake = [
     {id:1,name:"Пирог с камчатским крабом",price:990,weight:400,section:"печь"},
     {id:2,name:"Пирог с дальневосточным палтусом, налимьей печенью и обжаренным луком",price:960,weight:420,section:"супы"},
     {id:3,name:"Пирог с фермерской страчателлой",price:590,weight:400,section:"печь"},
@@ -56,7 +58,7 @@ export const bake = [
     
 ] 
 
-export const hotdish = [
+export const hotbluda = [
     {id:1,name:"Ассорти из морепродуктов, обжаренных с чесноком, в соусе из устриц",price:1590,weight:390,section:"горячие блюда"},
     {id:2,name:"Черная треска с картофельным пюре, муссом из пармезана и томатами",price:1390,weight:270,section:"горячие блюда"},
     {id:3,name:"Пельмени из щуки и Сахалинского гребешка",price:590,weight:260,section:"горячие блюда"},
@@ -126,7 +128,7 @@ export const sous = [
     {id:5,name:"Трюфельный",price:150,weight:30,section:"соусы"},
 ]
 
-export const sweets = [
+export const Sweets = [
     {id:1,name:"Крем-брюле",price:400,weight:120,section:"сладкое"},
     {id:1,name:"Творожник из печи",price:400,weight:160,section:"сладкое"},
     {id:1,name:"Медовик на гречишном меду",price:420,weight:170,section:"сладкое"},

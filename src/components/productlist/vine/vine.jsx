@@ -89,17 +89,12 @@ export const Vine = () => {
                <button onClick={display}>{data}</button>
            ))}
         </div>
-        {/* <div className={simle? "simle" :"simple none"}>
-         {vine.filter((data)=>data.producer==="симпл").map(el=>(
-          <button onClick={addv}>{el.name}</button>
-         ))}
-        </div> */}
+     
         <div className={sub_menu?"menu_vine":"list none"}>
         {sub_menu_list.map(data=>(
           <button onClick={addv}>{data.name}</button>
         ))}
-       
-          <button className="bt" onClick={back}>назад</button>
+       <button className="bt" onClick={back}>назад</button>
         </div>
         
         
