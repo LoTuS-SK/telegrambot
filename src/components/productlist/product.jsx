@@ -26,11 +26,6 @@ export const Product = () => {
   const [list_bread,set_list_bread]=useState([])
   const [list_sous,set_list_sous]=useState([])
   
-  const [h1,set_h1]=useState([])
-
-  
-  
-  
   const [snake_display,set_snake_display] = useState(false)
   const [salad_display,set_salad_display] = useState(false)
   const [menu1_display,set_menu1_display] = useState(true)
@@ -405,10 +400,7 @@ function del(e){
 
 
   const menu1 = ["Закуски","Салаты","Печь","Хлеб","Горячие Блюда","Гриль","Гарнир","Соус","Супы","Аквариум","Cладкое","напитки"]
-const copy = () => {
-  navigator.clipboard.writeText("'Hello!")
-  set_h1(["yes"])
-}
+
 
 return (
     <div className={"menu"}>
@@ -470,40 +462,40 @@ return (
       {list_snakes.map(el=>(<div onClick={del}><span>{el.name}</span> - {el.count}</div>))}
       
       {list_salad.length>0  && <h3>Салаты</h3>}
-      {list_salad.map(el=>(<div className="list-item" onClick={del}><span className='span'>{el.name}</span>  <span className='span count'>{el.count}</span></div>))}
+      {list_salad.map(el=>(<div className="list-item" onClick={del}><span className='span'>{el.name}</span> <span className='span count'>{el.count}</span></div>))}
       
       {list_hotdish.length>0  && <h3>Горичие блюда</h3>}
-      {list_hotdish.map(el=>(<div onClick={del}><span>{el.name}</span> - {el.count}</div>))}
+      {list_hotdish.map(el=>(<div className="list-item" onClick={del}><span className='span' >{el.name}</span> <span className='span count'>{el.count}</span></div>))}
       
       {list_soup.length>0  && <h3>Супы</h3>}
-      {list_soup.map(el=>(<div onClick={del}><span>{el.name}</span> - {el.count}</div>))}
+      {list_soup.map(el=>(<div className="list-item" onClick={del}><span className='span' >{el.name}</span> <span className='span count'>{el.count}</span></div>))}
       
       {list_onFire.length>0  && <h3>Гриль</h3>}
-      {list_onFire.map(el=>(<div onClick={del}><span>{el.name}</span> - {el.count}</div>))}
+      {list_onFire.map(el=>(<div className="list-item" onClick={del}><span className='span' >{el.name}</span> <span className='span count'>{el.count}</span></div>))}
       
       {list_bake.length>0  && <h3>Печь</h3>}
-      {list_bake.map(el=>(<div onClick={del}><span>{el.name}</span> - {el.count}</div>))}
+      {list_bake.map(el=>(<div className="list-item" onClick={del}><span className='span' >{el.name}</span> <span className='span count'>{el.count}</span></div>))}
       
       {list_bread.length>0  && <h3>Хлеб</h3>}
-      {list_bread.map(el=>(<div onClick={del}><span>{el.name}</span> - {el.count}</div>))}
+      {list_bread.map(el=>(<div className="list-item" onClick={del}><span className='span' >{el.name}</span> <span className='span count'>{el.count}</span></div>))}
       
       {list_sweets.length>0  && <h3>Сладкое</h3>}
-      {list_sweets.map(el=>(<div onClick={del}><span>{el.name}</span> - {el.count}</div>))}
+      {list_sweets.map(el=>(<div className="list-item" onClick={del}><span className='span' >{el.name}</span> <span className='span count'>{el.count}</span></div>))}
       
       {list_garnish.length>0  && <h3>Гарниры</h3>}
-      {list_garnish.map(el=>(<div onClick={del}><span>{el.name}</span> - {el.count}</div>))}
+      {list_garnish.map(el=>(<div className="list-item" onClick={del}><span className='span' >{el.name}</span> <span className='span count'>{el.count}</span></div>))}
       
       {list_aqua.length>0  && <h3>Аквариум</h3>}
-      {list_aqua.map(el=>(<div onClick={del}><span>{el.name}</span> - <span>{el.count}</span></div>))}
+      {list_aqua.map(el=>(<div className="list-item" onClick={del}><span className='span' >{el.name}</span> <span className='span count'>{el.count}</span></div>))}
       
       {list_sous.length>0  && <h3>Соус</h3>}
-      {list_sous.map(el=>(<div onClick={del}><span>{el.name}</span> - <span>{el.count}</span></div>))}
+      {list_sous.map(el=>(<div className="list-item" onClick={del}><span className='span' >{el.name}</span> <span className='span count'>{el.count}</span></div>))}
 
-      {h1.length>0 && <h1>YES</h1>}
+      
      </div>
     
       
-      <button onClick={copy}>copy</button>
+      
     </div>
   )
        }       
