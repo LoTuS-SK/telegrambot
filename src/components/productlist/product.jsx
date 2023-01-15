@@ -470,7 +470,7 @@ return (
       {list_snakes.map(el=>(<div onClick={del}><span>{el.name}</span> - {el.count}</div>))}
       
       {list_salad.length>0  && <h3>Салаты</h3>}
-      {list_salad.map(el=>(<div onClick={del}><span>{el.name}</span> - {el.count}</div>))}
+      {list_salad.map(el=>(<div className="list-item" onClick={del}><span className='span'>{el.name}</span>  <span className='span count'>{el.count}</span></div>))}
       
       {list_hotdish.length>0  && <h3>Горичие блюда</h3>}
       {list_hotdish.map(el=>(<div onClick={del}><span>{el.name}</span> - {el.count}</div>))}
@@ -494,10 +494,10 @@ return (
       {list_garnish.map(el=>(<div onClick={del}><span>{el.name}</span> - {el.count}</div>))}
       
       {list_aqua.length>0  && <h3>Аквариум</h3>}
-      {list_aqua.map(el=>(<div onClick={del}><span>{el.name}</span> - {el.count}</div>))}
+      {list_aqua.map(el=>(<div onClick={del}><span>{el.name}</span> - <span>{el.count}</span></div>))}
       
       {list_sous.length>0  && <h3>Соус</h3>}
-      {list_sous.map(el=>(<div onClick={del}><span>{el.name}</span> - {el.count}</div>))}
+      {list_sous.map(el=>(<div onClick={del}><span>{el.name}</span> - <span>{el.count}</span></div>))}
 
       {h1.length>0 && <h1>YES</h1>}
      </div>

@@ -19,7 +19,6 @@ export const base = [
     {id:17,name:"Тартар из мраморной говядины",price:1200,weight:200,section:"закуски"},
     {id:18,name:"Сыровяленое ассорти",price:770,weight:160,section:"закуски"},
     {id:19,name:"Домашнее сало на гренках",price:460,weight:120,section:"закуски"},
-    {id:20,name:"Домашнее сало на гренках",price:460,weight:120,section:"закуски"},
     {id:21,name:"Боровики с душистым маслом",price:580,weight:110,section:"закуски"},
     {id:21,name:"Грузди со сметано",price:580,weight:110,section:"закуски"},
     
