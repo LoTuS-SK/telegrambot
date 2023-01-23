@@ -2,6 +2,7 @@ import "./vine.css"
 import React from 'react'
 import { useState } from 'react'
 import { vine } from "../../database/basevine"
+import {Header} from "../../header/header"
 
 export const Vine = () => {
   
@@ -70,7 +71,11 @@ export const Vine = () => {
                text = text+el.name + " - " + el.count +"\n"
           ))
           navigator.clipboard.writeText(text)
+
+            
         }
+
+
 
     const menu_vine = [  "вининком",
                          "тре бикьери",
@@ -83,6 +88,8 @@ export const Vine = () => {
                          "???" ]
     
     return (
+     <>
+     <Header />
    <div className="warp">
         <div className={menudis?"menu_vine":"menu_vine none"}>
            {menu_vine.map(data=>(
@@ -106,5 +113,6 @@ export const Vine = () => {
         </div>
         <button onClick={copy}>copy</button>
    </div>
+   </>
   )
 }

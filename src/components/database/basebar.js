@@ -138,7 +138,7 @@ export const tee =[
     {id:4,name:"Ромашка",price:600,volume:700,section:"чай"},
     {id:4,name:"Шиповник",price:600,volume:700,section:"чай"},
     {id:4,name:"Иван-чай",price:600,volume:700,section:"чай"},
-    {id:4,name:"Чабрей",price:600,volume:700,section:"чай"},
+    {id:4,name:"Чабрец",price:600,volume:700,section:"чай"},
     {id:4,name:"Лаванда",price:600,volume:700,section:"чай"},
     {id:4,name:"Саган Дайля",price:600,volume:700,section:"чай"},
     

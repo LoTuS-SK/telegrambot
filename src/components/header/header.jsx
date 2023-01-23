@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 //import { Product } from '../productlist/product'
 import "../header/header.css"
 
+
 export const Header = () => {
 
 //const {user,ontogglebutton} = telegram();
@@ -13,6 +14,8 @@ export const Header = () => {
     <div className={'header'}>
         <button><Link to="/vine">Вино</Link></button>
         <button><Link to="/kitchen">Кухня</Link></button>
+        <button><Link to="/tort">Торт Счастье</Link></button>
+
        
     </div>
   )

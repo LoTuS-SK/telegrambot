@@ -5,11 +5,12 @@ import "./product.css"
 import { useEffect } from 'react'
 import { useCallback } from 'react'
 import { Sweet } from './sweet'
+import { Bar } from './bar/bar'
+import {Header} from "../header/header"
 
 
 
 
-//
 
 export const Product = () => {
   
@@ -25,6 +26,7 @@ export const Product = () => {
   const [list_aqua,set_list_aqua]=useState([])
   const [list_bread,set_list_bread]=useState([])
   const [list_sous,set_list_sous]=useState([])
+  //const [list_bar,set_list_bar]=useState([])
   
   const [snake_display,set_snake_display] = useState(false)
   const [salad_display,set_salad_display] = useState(false)
@@ -38,6 +40,7 @@ export const Product = () => {
   const [sweets_dispaly,set_sweets_display] = useState(false)
   const [aqua_dispaly,set_sweets_aqua] = useState(false)
   const [sous_dispaly,set_displa_sous] = useState(false)
+  const [bar_display,set_bardispaly] = useState(false)
   
   
   
@@ -145,6 +148,21 @@ export const Product = () => {
       set_sweets_aqua(false)
       set_displa_sous(true)
     }
+    if(dispaly === "напитки"){
+      set_snake_display(false)
+      set_menu1_display(false)
+      set_salad_display(false)
+      set_soup_display(false)
+      set_bake_display(false)
+      set_hotdish_display(false)
+      set_onFire_display(false)
+      set_garnish_display(false)
+      set_bread_display(false)
+      set_sweets_display(false)
+      set_sweets_aqua(false)
+      set_displa_sous(false)
+      set_bardispaly(true)
+    }
   
   }
   
@@ -161,7 +179,7 @@ export const Product = () => {
     set_sweets_display(false)
     set_sweets_aqua(false)
     set_displa_sous(false)
-    
+    //set_bardispaly(false)
   }
   
   // function saladd(){
@@ -355,23 +373,15 @@ const sals = useCallback(()=>{
     if(items.length>=1){
       if(items.some(el=>el.name===text)){
         let count = items[items.findIndex(el=>el.name===text)].count
-       
         items[items.findIndex(el=>el.name===text)].count=count+1
-        
         setitems([...items])
-        
-
       } else{
         let newbludo = {name:text,count:1}
         setitems([...items,newbludo])
-        
-      }
+        }
     }
-    
-    
-    sals()
-    
-}
+     sals()
+    }
 
   function name1(params) {
     console.log("hi2")
@@ -404,6 +414,7 @@ function del(e){
 
 return (
   <>
+  <Header />
     <div className={"menu"}>
       <div className={menu1_display ? "menu-items": "menu-items none" }>
             {menu1.map(element=>(<button className="testb" onClick={displaySnake}>{element}</button>))}
@@ -455,6 +466,7 @@ return (
       </div>
       
       <Sweet add={add} back={back} display={sweets_dispaly} name={name1} />
+      <Bar back={back} add={add} display={bar_display}/>
       </div>
       
       <div className="list">

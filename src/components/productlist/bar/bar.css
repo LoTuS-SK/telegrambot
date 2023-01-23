@@ -1,0 +1,7 @@
+.bar-menu{
+    display: flex;
+    flex-direction: column;
+}
+.none {
+    display: none;
+}
