@@ -70,7 +70,7 @@ export const Tort = () => {
         <input type="checkbox" className="chek_input" id="c1" name="cart"onChange={chengeCheckbox}/>
     </div>
     <div className="panel">
-        <h1 className='h'>{(arr(board))} ₽ </h1>
+        <h1 className='h'>{new Intl.NumberFormat('ru-RU').format(Number(arr(board)))} ₽ </h1>
     </div>
     <div className="keyboard">
         <div className="keyboard-wr">
