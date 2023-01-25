@@ -57,6 +57,7 @@ export const Tort = () => {
 
     function back(){
         setflip(true)
+        setboard([])
     }
 
     
@@ -82,12 +83,12 @@ export const Tort = () => {
                     ))}
                     </div>
                     <div className="back" onClick={back}>
-                        <h3 className="h">Оффицанты - {num/100*70}</h3>
-                        <h3 className="h">Кухня - {num/100*10}</h3>
-                        <h3 className="h">Мойка - {num/100*5}</h3>
-                        <h3 className="h">Бар - {num/100*7}</h3>
-                        <h3 className="h">Менеджер - {num/100*8}</h3>
-                        <h3 className="h">Общий - {num}</h3>
+                        <h3 className="h">Оффицанты - {Math.round(num/100*70)}</h3>
+                        <h3 className="h">Кухня - {Math.round(num/100*10)}</h3>
+                        <h3 className="h">Мойка - {Math.round(num/100*5)}</h3>
+                        <h3 className="h">Бар - {Math.round(num/100*7.5)}</h3>
+                        <h3 className="h">Менеджер - {Math.round(num/100*7.5)}</h3>
+                        <h3 className="h">Общий - {Math.round(num)}</h3>
                     </div>
 
                 </div>      
