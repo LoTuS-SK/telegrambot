@@ -65,8 +65,8 @@ export const Tort = () => {
     <>
     <div className="wrap-calc">
     <div className="drop">
-        <h2 className="tr"><Link to="/kitchen" className="tr" >Торт Счатья</Link></h2>
-        <label htmlFor="c1" className={checked?"chek":"chek yes"} >CARD</label>
+        <h2 className="tr"><Link to="/kitchen" className="tr" >Торт Счастья</Link></h2>
+        <label htmlFor="c1" className={checked?"chek":"chek yes"} >По Карте</label>
         <input type="checkbox" className="chek_input" id="c1" name="cart"onChange={chengeCheckbox}/>
     </div>
     <div className="panel">
@@ -87,7 +87,7 @@ export const Tort = () => {
                         <h3 className="h">Мойка - {num/100*5}</h3>
                         <h3 className="h">Бар - {num/100*7}</h3>
                         <h3 className="h">Менеджер - {num/100*8}</h3>
-                        <h3 className="h">card - {num}</h3>
+                        <h3 className="h">Общий - {num}</h3>
                     </div>
 
                 </div>      
