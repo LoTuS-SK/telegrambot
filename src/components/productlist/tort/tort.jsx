@@ -64,7 +64,7 @@ export const Tort = () => {
     return (
     <>
     <div className="wrap-calc">
-    <div class="drop">
+    <div className="drop">
         <h2 className="tr"><Link to="/kitchen" className="tr" >Торт Счатья</Link></h2>
         <label htmlFor="c1" className={checked?"chek":"chek yes"} >CARD</label>
         <input type="checkbox" className="chek_input" id="c1" name="cart"onChange={chengeCheckbox}/>
