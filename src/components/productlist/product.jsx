@@ -133,7 +133,7 @@ export const Product = () => {
       text+=line3 + "\n"
       text+="       *Вино*\n"
       text+=line3 + "\n"
-      list_bar_alko.forEach(el=>(
+      list_vine.forEach(el=>(
         text+=`${el.name} - ${el.count} шт - ${el.count*el.price} \n ${line2} \n`
         
       ))
