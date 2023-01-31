@@ -8,7 +8,7 @@ export const vine = [
     {name:"Падл Крик Совиньон Блан",country:"Новая зеландия",type:"белое",producer:"симпл",price:600},
     {name:"Шнайдер  Цвайгельт",country:"Австрия",type:"красное",producer:"тре бикьери",price:450},
     {name:"Высокий берег Мерло",country:"Россия",type:"красное",producer:"ладога",price:500},
-    {name:"Экслюзив Николя фейят",country:"франция",type:"Игристое",producer:"вининком",price:14300},
+    {name:"Экслюзив Николя фейят",country:"Франция",type:"Игристое",producer:"вининком",price:14300},
     {name:"Абрау-Дюрсо Блан де Блан",country:"Россия",type:"Игристое",producer:"аст",price:2700},
     {name:"Розовое «Империал Кюве»",country:"Россия",type:"Игристое",producer:"аст",price:2900},
     {name:"Креман",country:"Франция",type:"Игристое",producer:"Метро",price:3900},
@@ -144,6 +144,5 @@ export const vine = [
     {name:"Казал Гарсия Винью Верда",country:"Португалия",type:"розовое",producer:"классика",price:2500},
     {name:"Финка Софениа Альтосур Мальбек Розе",country:"Аргентина",type:"розовое",producer:"вайнстудио",price:2700},
     {name:"Оттелла Розес",country:"Италия",type:"розовое",producer:"???",price:4700},
-
 
 ]

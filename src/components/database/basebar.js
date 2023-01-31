@@ -31,7 +31,6 @@ export const hotdrinks = [
     {id:1,name:"чай Брусника-мята",price:600,volume:600,section:"Горячие напитки"},
     {id:1,name:"чай Черная смородина с розмарином",price:600,volume:600,section:"Горячие напитки"},
     {id:1,name:"чай Облепиха ",price:600,volume:600,section:"Горячие напитки"},
-    {id:1,name:"чай Брусника-мята",price:600,volume:600,section:"Горячие напитки"},
     {id:1,name:"чай Малина-имбирь",price:600,volume:600,section:"Горячие напитки"},
     {id:1,name:"Глинтвейн на красном",price:490,volume:200,section:"Горячие напитки"},
     {id:1,name:"Глинтвейн на белом",price:490,volume:200,section:"Горячие напитки"},
@@ -66,7 +65,7 @@ export const tincture = [
     {id:4,name:"Ром на кислой вишне",price:390,volume:50,section:"Настойки"},
     {id:4,name:"Виски на кураге",price:460,volume:50,section:"Настойки"},
     {id:4,name:"Дигустационный сет на 3",price:560,volume:50,section:"Настойки"},
-    {id:4,name:"Дигустационный сет на 3",price:780,volume:50,section:"Настойки"},
+    {id:4,name:"Дигустационный сет на 5",price:780,volume:50,section:"Настойки"},
 ]
 
 export const strong = [
@@ -110,6 +109,11 @@ export const strong = [
     {id:4,name:"Стелла",price:390,volume:300,section:"пиво"},
     {id:4,name:"безалкогольное",price:420,volume:500,section:"пиво"},
     {id:4,name:"Сидр Маглуар п/сл",price:1890,volume:750,section:"пиво"},
+    {id:4,name:"Чистые россы",price:450,volume:50,section:"водка"},
+    {id:4,name:"Золотая Царская",price:320,volume:50,section:"водка"},
+    {id:4,name:"Онегин",price:470,volume:50,section:"водка"},
+    {id:4,name:"Косогоров Самогон No2 Пшеничный",price:270,volume:50,section:"водка"},
+    {id:4,name:"Косогоров Самогон» No3 Ржаной",price:270,volume:50,section:"водка"},
 
 ]
 

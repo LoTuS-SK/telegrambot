@@ -106,7 +106,7 @@ export const Vine = () => {
         
         
         <div className="list">
-          <h1 className="zakaz">Заказ</h1>
+          
           {list.map(data=>(
                <div className="name">{data.name} - {data.count}</div>
           ))}

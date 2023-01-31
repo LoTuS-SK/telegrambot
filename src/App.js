@@ -2,7 +2,7 @@
 import { useEffect } from 'react';
 import './App.css';
 // import {Header} from "./components/header/header"
-import { telegram } from './components/hooks/usetelegramApp';
+//import { telegram } from './components/hooks/usetelegramApp';
 import { Route ,Routes } from "react-router-dom"
 import { Form } from './components/form/form';
 import {Product} from "./components/productlist/product";
@@ -11,15 +11,15 @@ import {Admin} from "../src/components/productlist/admin"
 
 import { Tort } from './components/productlist/tort/tort';
 
-const {tg} = telegram();
+// const {tg} = telegram();
 
-function App() {
+ function App() {
   
 
 
-  useEffect(() => {
-    tg.ready();
-  },[])
+//   useEffect(() => {
+//     tg.ready();
+//   },[])
 
 
 

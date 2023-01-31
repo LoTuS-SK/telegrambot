@@ -36,6 +36,7 @@ export const salad = [
     {id:6,name:"Салат по-деревенски",price:550,weight:250,section:"салаты"},
     {id:7,name:"Сладкие томаты с каперсами, красным луком и кремом бальзамик",price:770,weight:270,section:"салаты"},
     {id:8,name:"Утиная печень со шпинатом и медово- горчичной заправкой",price:690,weight:200,section:"салаты"},
+    {id:8,name:"Салат «Приморский» с дикими креветками",price:990,weight:250,section:"салаты"},
 ]
 
 export const soup = [

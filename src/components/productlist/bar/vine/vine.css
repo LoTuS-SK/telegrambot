@@ -1,12 +1,12 @@
-.menu_vine{
+.none {
+    display: none;
+}
+
+.menu_vine {
     display: flex;
     flex-direction: column;
-
 }
-.none{
-    display:none;
-}
-.warp{
+.vine_bokals{
     display: flex;
     flex-direction: column;
 }
