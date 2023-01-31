@@ -59,4 +59,7 @@ button{
     padding-left: 15px;
     padding-right: 15px;
     padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
 }
+

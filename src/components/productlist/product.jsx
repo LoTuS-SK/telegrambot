@@ -29,16 +29,146 @@ export const Product = () => {
   const [list_sous,set_list_sous]=useState([])
   const [list_bar_alko,set_list_bar_alko]=useState([])
   const [list_bar,set_list_bar]=useState([])
-
   const [list_bar_l,set_list_bar_l]=useState([])
   const [list_bar_t,set_list_bar_t]=useState([])
   const [list_bar_h,set_list_bar_h]=useState([])
   const [list_bar_coc,set_list_bar_coc]=useState([])
   const [list_bar_tin,set_list_bar_tin]=useState([])
   const [list_bar_dr,set_list_bar_dr]=useState([])
-
-
   const [list_vine,set_list_vine]=useState([])
+
+  const copy = () => {
+    let text = ""
+    //let line1= "--------------------------"
+    let line2 ="_____________________________________"
+    let line3 ="***********************************************"
+
+    if (list_salad.length>0){
+      text+=line3 + "\n"
+      text+="         Cалаты\n"
+      text+=line3 + "\n"
+      list_salad.forEach(el=>(
+        text+=el.name + "  -  " + el.count +"шт"+ " - "+el.count*el.price+"₽"+"\n  "+ line2 + "\n"
+      ))
+    }
+
+    if (list_snakes.length>0){
+      text+=line3 + "\n"
+      text+="         Закуски\n"
+      text+=line3 + "\n"
+      list_snakes.forEach(el=>(
+        text+=el.name + "  -  " + el.count +"шт"+ " - "+el.count*el.price+"₽"+"\n  "+ line2 + "\n"
+      ))
+    }
+
+    if (list_hotdish.length>0){
+      text+=line3 + "\n"
+      text+="         Горячие Блюда\n"
+      text+=line3 + "\n"
+      list_hotdish.forEach(el=>(
+        text+=el.name + "  -  " + el.count +"шт"+ " - "+el.count*el.price+"₽"+"\n  "+ line2 + "\n"
+        
+      ))
+    }
+    if (list_bake.length>0){
+      text+=line3 + "\n"
+      text+="         Печь\n"
+      text+=line3 + "\n"
+      list_bake.forEach(el=>(
+        text+=el.name + "  -  " + el.count +"шт"+ " - "+el.count*el.price+"₽"+"\n  "+ line2 + "\n"
+        
+      ))
+    }
+    if (list_soup.length>0){
+      text+=line3 + "\n"
+      text+="         *Супы*\n"
+      text+=line3 + "\n"
+      list_soup.forEach(el=>(
+        text+=el.name + "  -  " + el.count +"шт"+ " - "+el.count*el.price+"₽"+"\n  "+ line2 + "\n"
+        
+      ))
+    }
+
+    if (list_onFire.length>0){
+      text+=line3 + "\n"
+      text+="          *Гриль*\n"
+      text+=line3 + "\n"
+      list_onFire.forEach(el=>(
+        text+=el.name + "  -  " + el.count +"шт"+ " - "+el.count*el.price+"₽"+"\n  "+ line2 + "\n"
+        
+      ))
+    }
+
+    if (list_sweets.length>0){
+      text+=line3 + "\n"
+      text+="         Сладкое\n"
+      text+=line3 + "\n"
+      list_sweets.forEach(el=>(
+        text+=el.name + "  -  " + el.count +"шт"+ " - "+el.count*el.price+"₽"+"\n  "+ line2 + "\n"
+        
+      ))
+    }
+
+    if (list_bread.length>0){
+      text+=line3 + "\n"
+      text+="          Хлеб\n"
+      text+=line3 + "\n"
+      list_bread.forEach(el=>(
+        text+=el.name + "  -  " + el.count +"шт"+ " - "+el.count*el.price+"₽"+"\n  "+ line2 + "\n"
+        
+      ))
+    }
+    if (list_bar_alko.length>0){
+      text+=line3 + "\n"
+      text+="       *Алкогольные напитки*\n"
+      text+=line3 + "\n"
+      list_bar_alko.forEach(el=>(
+        text+=el.name + "  -  " + el.count +"шт"+ " - "+el.count*el.price+"₽"+"\n  "+ line2 + "\n"
+        
+      ))
+    }
+
+    if (list_bar_l.length>0 || list_bar_dr.length>0 || list_bar_h.length>0 || list_bar.length>0 || list_bar_t.length>0) {
+      text+=line3 + "\n"
+      text+="       Напитки\n"
+      text+=line3 + "\n"
+      
+      list_bar.forEach(el=>(
+        text+=el.name + "  -  " + el.count +"шт"+ " - "+el.count*el.price+"₽"+"\n  "+ line2 + "\n"
+        
+      ))
+      
+      list_bar_l.forEach(el=>(
+        text+=el.name + "  -  " + el.count +"шт"+ " - "+el.count*el.price+"₽"+"\n  "+ line2 + "\n"
+        
+      ))
+      list_bar_dr.forEach(el=>(
+        text+=el.name + "  -  " + el.count +"шт"+ " - "+el.count*el.price+"₽"+"\n  "+ line2 + "\n"
+        
+      ))
+      list_bar_h.forEach(el=>(
+        text+=el.name + "  -  " + el.count +"шт"+ " - "+el.count*el.price+"₽"+"\n  "+ line2 + "\n"
+        
+      ))
+      list_bar.forEach(el=>(
+        text+=el.name + "  -  " + el.count +"шт"+ " - "+el.count*el.price+"₽"+"\n  "+ line2 + "\n"
+        
+      ))
+      list_bar_t.forEach(el=>(
+        text+=el.name + "  -  " + el.count +"шт"+ " - "+el.count*el.price+"₽"+"\n  "+ line2 + "\n"
+        
+      ))
+    }
+
+    text+= "ИТОГО - " + new Intl.NumberFormat('ru-RU').format(sum) +"₽"
+
+    
+
+   
+    navigator.clipboard.writeText(text)
+
+      
+  }
   
   const [snake_display,set_snake_display] = useState(false)
   const [salad_display,set_salad_display] = useState(false)
@@ -751,6 +881,7 @@ return (
       {/* {sum>0 && <h3>сумма</h3>} */}
       {items.length>0 && <h3> Итого - {sum} р</h3>}
       {/* <button onClick={summa}>сумма</button> */}
+      {items.length>0 && <button className='cop' onClick={copy}>Копировать</button>}
      </div>
     
       
