@@ -62,15 +62,15 @@ export const Product = () => {
       ))
     }
 
-    // if (list_hotdish.length>0){
-    //   text+=line3 + "\n"
-    //   text+="         Горячие Блюда\n"
-    //   text+=line3 + "\n"
-    //   list_hotdish.forEach(el=>(
-    //     text+=el.name + "  -  " + el.count +"шт"+ " - "+el.count*el.price+"₽"+"\n  "+ line2 + "\n"
+    if (list_hotdish.length>0){
+      text+=line3 + "\n"
+      text+="         Горячие Блюда\n"
+      text+=line3 + "\n"
+      list_hotdish.forEach(el=>(
+        text+=`${el.name} - ${el.count} шт - ${el.count*el.price} \n ${line2} \n`
         
-    //   ))
-    // }
+      ))
+    }
     // if (list_bake.length>0){
     //   text+=line3 + "\n"
     //   text+="         Печь\n"
