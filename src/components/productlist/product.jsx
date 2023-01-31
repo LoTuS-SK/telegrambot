@@ -49,16 +49,35 @@ export const Product = () => {
       text+=line3 + "\n"
       list_salad.forEach(el=>(
         //text+=el.name + "  -  " + el.count +"шт"+ " - "+el.count*el.price+"₽"+"\n  "+ line2 + "\n"
-        text+=`${el.name} - ${el.count} шт - ${el.count*el.price} \n ${line2} \n`
+        text+=`${el.name} - ${el.count} шт - ${el.count*el.price} ₽ \n ${line2} \n`
       ))
     }
+    if (list_aqua.length>0){
+      text+=line3 + "\n"
+      text+="              *Аквариум*\n"
+      text+=line3 + "\n"
+      list_aqua.forEach(el=>(
+        //text+=el.name + "  -  " + el.count +"шт"+ " - "+el.count*el.price+"₽"+"\n  "+ line2 + "\n"
+        text+=`${el.name} - ${el.count} шт - ${el.count*el.price} ₽ \n ${line2} \n`
+      ))
+    }
+    if (list_garnish.length>0){
+      text+=line3 + "\n"
+      text+="              *Гарнир*\n"
+      text+=line3 + "\n"
+      list_garnish.forEach(el=>(
+        //text+=el.name + "  -  " + el.count +"шт"+ " - "+el.count*el.price+"₽"+"\n  "+ line2 + "\n"
+        text+=`${el.name} - ${el.count} шт - ${el.count*el.price} ₽ \n ${line2} \n`
+      ))
+    }
+
 
     if (list_snakes.length>0){
       text+=line3 + "\n"
       text+="              *Закуски*\n"
       text+=line3 + "\n"
       list_snakes.forEach(el=>(
-        text+=`${el.name} - ${el.count} шт - ${el.count*el.price} \n ${line2} \n`
+        text+=`${el.name} - ${el.count} шт - ${el.count*el.price} ₽ \n ${line2} \n`
       ))
     }
 
@@ -67,7 +86,7 @@ export const Product = () => {
       text+="             *Горячие Блюда*\n"
       text+=line3 + "\n"
       list_hotdish.forEach(el=>(
-        text+=`${el.name} - ${el.count} шт - ${el.count*el.price} \n ${line2} \n`
+        text+=`${el.name} - ${el.count} шт - ${el.count*el.price} ₽ \n ${line2} \n`
         
       ))
     }
@@ -76,7 +95,7 @@ export const Product = () => {
       text+="               *Печь*\n"
       text+=line3 + "\n"
       list_bake.forEach(el=>(
-        text+=`${el.name} - ${el.count} шт - ${el.count*el.price} \n ${line2} \n`
+        text+=`${el.name} - ${el.count} шт - ${el.count*el.price} ₽ \n ${line2} \n`
         
       ))
      }
@@ -85,7 +104,7 @@ export const Product = () => {
       text+="             *Супы*\n"
       text+=line3 + "\n"
       list_soup.forEach(el=>(
-        text+=`${el.name} - ${el.count} шт - ${el.count*el.price} \n ${line2} \n`
+        text+=`${el.name} - ${el.count} шт - ${el.count*el.price} ₽ \n ${line2} \n`
         
       ))
     }
@@ -95,7 +114,7 @@ export const Product = () => {
       text+="              *Гриль*\n"
       text+=line3 + "\n"
       list_onFire.forEach(el=>(
-        text+=`${el.name} - ${el.count} шт - ${el.count*el.price} \n ${line2} \n`
+        text+=`${el.name} - ${el.count} шт - ${el.count*el.price} ₽ \n ${line2} \n`
         
       ))
     }
@@ -105,7 +124,7 @@ export const Product = () => {
       text+="              *Сладкое*\n"
       text+=line3 + "\n"
       list_sweets.forEach(el=>(
-        text+=`${el.name} - ${el.count} шт - ${el.count*el.price} \n ${line2} \n`
+        text+=`${el.name} - ${el.count} шт - ${el.count*el.price} ₽ \n ${line2} \n`
         
       ))
     }
@@ -115,7 +134,7 @@ export const Product = () => {
       text+="               *Хлеб*\n"
       text+=line3 + "\n"
       list_bread.forEach(el=>(
-        text+=`${el.name} - ${el.count} шт - ${el.count*el.price} \n ${line2} \n`
+        text+=`${el.name} - ${el.count} шт - ${el.count*el.price} ₽ \n ${line2} \n`
         
       ))
     }
@@ -124,7 +143,7 @@ export const Product = () => {
       text+="               *Алкогольные напитки*\n"
       text+=line3 + "\n"
       list_bar_alko.forEach(el=>(
-        text+=`${el.name} - ${el.count} шт - ${el.count*el.price} \n ${line2} \n`
+        text+=`${el.name} - ${el.count} шт - ${el.count*el.price} ₽ \n ${line2} \n`
         
       ))
     }
@@ -134,7 +153,7 @@ export const Product = () => {
       text+="       *Вино*\n"
       text+=line3 + "\n"
       list_vine.forEach(el=>(
-        text+=`${el.name} - ${el.count} шт - ${el.count*el.price} \n ${line2} \n`
+        text+=`${el.name} - ${el.count} шт - ${el.count*el.price} ₽ \n ${line2} \n`
         
       ))
     }
@@ -145,28 +164,28 @@ export const Product = () => {
       text+=line3 + "\n"
       
       list_bar.forEach(el=>(
-        text+=`${el.name} - ${el.count} шт - ${el.count*el.price} \n ${line2} \n`
+        text+=`${el.name} - ${el.count} шт - ${el.count*el.price} ₽ \n ${line2} \n`
         
       ))
       
       list_bar_l.forEach(el=>(
-        text+=`${el.name} - ${el.count} шт - ${el.count*el.price} \n ${line2} \n`
+        text+=`${el.name} - ${el.count} шт - ${el.count*el.price} ₽ \n ${line2} \n`
         
       ))
       list_bar_dr.forEach(el=>(
-        text+=`${el.name} - ${el.count} шт - ${el.count*el.price} \n ${line2} \n`
+        text+=`${el.name} - ${el.count} шт - ${el.count*el.price} ₽ \n ${line2} \n`
         
       ))
       list_bar_h.forEach(el=>(
-        text+=`${el.name} - ${el.count} шт - ${el.count*el.price} \n ${line2} \n`
+        text+=`${el.name} - ${el.count} шт - ${el.count*el.price} ₽\n ${line2} \n`
         
       ))
       list_bar.forEach(el=>(
-        text+=`${el.name} - ${el.count} шт - ${el.count*el.price} \n ${line2} \n`
+        text+=`${el.name} - ${el.count} шт - ${el.count*el.price} ₽ \n ${line2} \n`
         
       ))
       list_bar_t.forEach(el=>(
-        text+=`${el.name} - ${el.count} шт - ${el.count*el.price} \n ${line2} \n`
+        text+=`${el.name} - ${el.count} шт - ${el.count*el.price} ₽ \n ${line2} \n`
         
       ))
     }
