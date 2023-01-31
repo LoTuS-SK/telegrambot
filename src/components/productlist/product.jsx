@@ -41,11 +41,11 @@ export const Product = () => {
     let text = ""
     //let line1= "--------------------------"
     let line2 ="_____________________________________"
-    let line3 ="***********************************************"
+    let line3 ="*********************************************************"
 
     if (list_salad.length>0){
       text+=line3 + "\n"
-      text+="         Cалаты\n"
+      text+="              *Cалаты*\n"
       text+=line3 + "\n"
       list_salad.forEach(el=>(
         //text+=el.name + "  -  " + el.count +"шт"+ " - "+el.count*el.price+"₽"+"\n  "+ line2 + "\n"
@@ -55,7 +55,7 @@ export const Product = () => {
 
     if (list_snakes.length>0){
       text+=line3 + "\n"
-      text+="         Закуски\n"
+      text+="              *Закуски*\n"
       text+=line3 + "\n"
       list_snakes.forEach(el=>(
         text+=`${el.name} - ${el.count} шт - ${el.count*el.price} \n ${line2} \n`
@@ -64,7 +64,7 @@ export const Product = () => {
 
     if (list_hotdish.length>0){
       text+=line3 + "\n"
-      text+="         Горячие Блюда\n"
+      text+="             *Горячие Блюда*\n"
       text+=line3 + "\n"
       list_hotdish.forEach(el=>(
         text+=`${el.name} - ${el.count} шт - ${el.count*el.price} \n ${line2} \n`
@@ -73,7 +73,7 @@ export const Product = () => {
     }
     if (list_bake.length>0){
       text+=line3 + "\n"
-      text+="         Печь\n"
+      text+="               *Печь*\n"
       text+=line3 + "\n"
       list_bake.forEach(el=>(
         text+=`${el.name} - ${el.count} шт - ${el.count*el.price} \n ${line2} \n`
@@ -82,7 +82,7 @@ export const Product = () => {
      }
     if (list_soup.length>0){
       text+=line3 + "\n"
-      text+="         *Супы*\n"
+      text+="             *Супы*\n"
       text+=line3 + "\n"
       list_soup.forEach(el=>(
         text+=`${el.name} - ${el.count} шт - ${el.count*el.price} \n ${line2} \n`
@@ -92,7 +92,7 @@ export const Product = () => {
 
     if (list_onFire.length>0){
       text+=line3 + "\n"
-      text+="          *Гриль*\n"
+      text+="              *Гриль*\n"
       text+=line3 + "\n"
       list_onFire.forEach(el=>(
         text+=`${el.name} - ${el.count} шт - ${el.count*el.price} \n ${line2} \n`
@@ -102,7 +102,7 @@ export const Product = () => {
 
     if (list_sweets.length>0){
       text+=line3 + "\n"
-      text+="         Сладкое\n"
+      text+="              *Сладкое*\n"
       text+=line3 + "\n"
       list_sweets.forEach(el=>(
         text+=`${el.name} - ${el.count} шт - ${el.count*el.price} \n ${line2} \n`
@@ -112,7 +112,7 @@ export const Product = () => {
 
     if (list_bread.length>0){
       text+=line3 + "\n"
-      text+="          Хлеб\n"
+      text+="               *Хлеб*\n"
       text+=line3 + "\n"
       list_bread.forEach(el=>(
         text+=`${el.name} - ${el.count} шт - ${el.count*el.price} \n ${line2} \n`
@@ -121,7 +121,7 @@ export const Product = () => {
     }
     if (list_bar_alko.length>0){
       text+=line3 + "\n"
-      text+="       *Алкогольные напитки*\n"
+      text+="               *Алкогольные напитки*\n"
       text+=line3 + "\n"
       list_bar_alko.forEach(el=>(
         text+=`${el.name} - ${el.count} шт - ${el.count*el.price} \n ${line2} \n`
