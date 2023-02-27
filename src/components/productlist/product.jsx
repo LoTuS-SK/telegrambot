@@ -40,22 +40,22 @@ export const Product = () => {
   const copy = () => {
     let text = ""
     //let line1= "--------------------------"
-    let line2 ="_____________________________________"
-    let line3 ="*********************************************************"
+    // let line2 ="_____________________________________"
+    //let line3 ="*********************************************************"
 
     if (list_salad.length>0){
-      text+=line3 + "\n"
-      text+="              *Cалаты*\n"
-      text+=line3 + "\n"
+     // text+=line3 + "\n"
+     // text+="              *Cалаты*\n"
+     // text+=line3 + "\n"
       list_salad.forEach(el=>(
         //text+=el.name + "  -  " + el.count +"шт"+ " - "+el.count*el.price+"₽"+"\n  "+ line2 + "\n"
         text+=`${el.name} - ${el.count} шт - ${el.count*el.price} ₽ \n ${line2} \n`
       ))
     }
     if (list_aqua.length>0){
-      text+=line3 + "\n"
+     // text+=line3 + "\n"
       text+="              *Аквариум*\n"
-      text+=line3 + "\n"
+     // text+=line3 + "\n"
       list_aqua.forEach(el=>(
         //text+=el.name + "  -  " + el.count +"шт"+ " - "+el.count*el.price+"₽"+"\n  "+ line2 + "\n"
         text+=`${el.name} - ${el.count} шт - ${el.count*el.price} ₽ \n ${line2} \n`
@@ -73,7 +73,7 @@ export const Product = () => {
 
 
     if (list_snakes.length>0){
-      text+=line3 + "\n"
+     // text+=line3 + "\n"
       text+="              *Закуски*\n"
       text+=line3 + "\n"
       list_snakes.forEach(el=>(
@@ -82,13 +82,12 @@ export const Product = () => {
     }
 
     if (list_hotdish.length>0){
-      text+=line3 + "\n"
+     // text+=line3 + "\n"
       text+="             *Горячие Блюда*\n"
-      text+=line3 + "\n"
-      list_hotdish.forEach(el=>(
+     // text+=line3 + "\n" list_hotdish.forEach(el=>(
         text+=`${el.name} - ${el.count} шт - ${el.count*el.price} ₽ \n ${line2} \n`
         
-      ))
+      
     }
     if (list_bake.length>0){
       text+=line3 + "\n"

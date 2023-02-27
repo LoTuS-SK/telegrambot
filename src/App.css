@@ -1,16 +1,13 @@
 * {
-  margin:0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body{
-  
-  border: none;
-  outline: none;
-  cursor: pointer;
-  margin: 0 auto;
-  
+border: none;
+outline: none;
+cursor: pointer;
+margin: 0 auto;
 }
 
 .App{
